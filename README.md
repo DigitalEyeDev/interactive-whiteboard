@@ -183,23 +183,6 @@ const SERVER_URL = "https://whiteboard-realtime-server.onrender.com";
 https://whiteboard-live.netlify.app
 ```
 
-4. Use room URLs to collaborate:
-
-```
-https://whiteboard-live.netlify.app/?room=demo
-```
-
----
-
-## 📸 Screenshots
-
-(Add your project screenshots here)
-
-```
-![Whiteboard Screenshot](screenshots/whiteboard.png)
-```
-
----
 
 ## 💡 Future Enhancements
 
@@ -222,19 +205,4 @@ This project is open-source and free to use.
 ## ❤️ Credits
 
 Developed by **Subhrajit Nayak**
-Guided & Built with assistance from ChatGPT 🤝
 
-```
-
----
-
-# 🎉 DONE!
-
-Want me to also generate:
-- A `.gitignore`
-- A clean folder structure
-- A project logo/banner
-- Installation badges & shields for README
-
-Just tell me!
-```
