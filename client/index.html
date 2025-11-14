@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standard Whiteboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="title">Whiteboard</h1>
+
+    <div class="toolbar">
+
+      <button class="icon-btn" id="prevPageBtn" title="Previous Page">⬅️</button>
+<button class="icon-btn" id="nextPageBtn" title="Next Page">➡️</button>
+
+<span id="pageIndicator" class="page-label">Page 1</span>
+
+      <!-- Pen -->
+      <button class="icon-btn" id="penTool" title="Pen">✏️</button>
+
+      <!-- Eraser -->
+      <button class="icon-btn" id="eraserTool" title="Eraser">🧽</button>
+
+      <!-- Color -->
+      <input type="color" id="colorPicker" class="color-picker" value="#000000">
+
+      <!-- Brush Size -->
+      <!-- Pen Size -->
+<div class="size-group">
+  <span class="size-text">✏️</span>
+  <input type="range" id="penSize" min="2" max="25" value="4" class="brush-slider">
+  <span id="penSizeLabel" class="size-label">4px</span>
+</div>
+
+<!-- Eraser Size -->
+<div class="size-group">
+  <span class="size-text">🧽</span>
+  <input type="range" id="eraserSize" min="5" max="50" value="15" class="brush-slider">
+  <span id="eraserSizeLabel" class="size-label">15px</span>
+</div>
+
+
+      <!-- Undo -->
+      <button class="icon-btn" id="undoBtn" title="Undo">↩️</button>
+
+      <!-- Redo -->
+      <button class="icon-btn" id="redoBtn" title="Redo">↪️</button>
+
+      <!-- Clear -->
+      <button class="icon-btn danger" id="clearBtn" title="Clear">🗑️</button>
+
+      <!-- Save -->
+      <button class="icon-btn" id="saveBtn" title="Save">💾</button>
+
+      <!-- Theme -->
+      <button class="icon-btn" id="themeToggle" title="Toggle Theme">🌙</button>
+
+    </div>
+  </header>
+
+  <main class="board">
+    <canvas id="whiteboard"></canvas>
+  </main>
+
+    <footer class="footer">
+    <p>&copy; 2025 Standard Whiteboard</p>
+  </footer>
+
+  <!-- SOCKET + MAIN JS (Correct place) -->
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

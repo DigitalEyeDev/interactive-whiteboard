@@ -1,0 +1,165 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, Arial, sans-serif;
+}
+
+/* LIGHT / DARK MODE VARIABLES */
+:root {
+  --bg: #f9fafb;
+  --header: #4f46e5;
+  --text: #1f2937;
+  --canvas-bg: #ffffff;
+  --footer-bg: #e0e7ff;
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --header: #1e293b;
+  --text: #e2e8f0;
+  --canvas-bg: #1e293b;
+  --footer-bg: #334155;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* HEADER */
+.header {
+  background: var(--header);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* TOOLBAR */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-btn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  padding: 0.45rem 0.65rem;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.icon-btn:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+.icon-btn.danger {
+  background: rgba(255,0,0,0.4);
+}
+
+.color-picker {
+  width: 40px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.brush-slider {
+  width: 80px;
+  cursor: pointer;
+}
+
+/* CANVAS AREA */
+.board {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+canvas {
+  background: var(--canvas-bg);
+  width: 98%;
+  height: 88vh;        /* MUCH larger drawing area */
+  border-radius: 12px;
+  border: 2px solid var(--header);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* FOOTER */
+.footer {
+  background: var(--footer-bg);
+  text-align: center;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+}
+.size-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.2rem 0.4rem;
+  color: white;
+  background: rgba(0,0,0,0.2);
+  border-radius: 6px;
+}
+
+.size-group {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(255,255,255,0.15);
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+}
+
+.size-text {
+  font-size: 1.1rem;
+}
+
+.size-label {
+  font-size: 0.85rem;
+  color: white;
+  background: rgba(0,0,0,0.25);
+  padding: 0.15rem 0.35rem;
+  border-radius: 6px;
+}
+
+.brush-slider {
+  cursor: pointer;
+  width: 70px;
+}
+
+.page-label {
+  color: white;
+  background: rgba(0,0,0,0.2);
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-left: 0.3rem;
+  font-weight: 600;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .toolbar {
+    flex-wrap: wrap;
+  }
+
+  canvas {
+    width: 100%;
+  }
+}
